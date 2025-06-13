@@ -1,62 +1,343 @@
 body {
-    width: 100%;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-family: Helvetica, sans-serif;
+
+    max-width: 100%;
     margin: auto;
-    text-align: left;
-    font-family: monospace; 
-    background-image: radial-gradient(rgb(255, 255, 255),rgb(245, 249, 251),rgb(245, 249, 251), rgb(127, 166, 191));
-}
-
-h1 {
-    padding-top: 10%;
     text-align: center;
 }
 
-h2{
-    padding-top: 5%;
-    text-align: center;
+p {
+    font-family: "Source Code Pro", monospace;
+    margin: auto 10%;
+    font-weight: 150;
+    justify-content: left;
+
+    padding-bottom: 20px;
 }
 
-section {
-    margin:auto;
-	width: 400px;
-	height: 100%;
-	background-image: linear-gradient(rgb(235, 244, 249),rgb(174, 198, 211));
+
+#top {
+    background-color: black;
+    color: aliceblue;
+
+    max-width: 100%;
+    display: block;
+    padding-bottom: 50px;
+
 }
 
-aside {
-    text-align: justify;
-    padding-left: 20px;
-    padding-right: 20px;
+#top #topnav {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: auto 30px;
+    /* justify-content: space-around; */
+
+    position: sticky;
+    top: 0;
 }
+
+#top #topnav a {
+    padding-top: 10px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#home {
+    margin-right: auto;    
+}
+
+#top header {
+    padding-top: 100px;
+    margin: auto 10%;
+    /* text-align: left; */
+    /* max-width: 600px; */
+
+}
+
+
+/* main content begins */
+
+
+#gridcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: 200px;
+    align-content: center;
+   
+}
+
+/* hover effect for all grid boxes */
+#gridcontainer div:hover {
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(rgb(255, 255, 255)); 
+    z-index: 1;
+}
+
+
+
+/* font styles for all imageboxes */
+#gridcontainer div a {
+    display: block;
+    font-weight: bold;
+    color: black;
+    text-shadow: 20px;
+    text-decoration: none;
+  
+    font-size: 20px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    /* have the values above add up to 200px, i.e the grid box size */
+    
+}
+
+#imagebox1 {
+    background-color: aqua;
+    /* background-image: url("data/koi.png"); */
+    min-width: calc(100% / 2);
+}
+
+#imagebox2 {
+    background-color: pink;
+    min-width: calc(100% / 2);
+}
+
+#imagebox3 {
+    background-color: yellow;
+    min-width: 200%;
+}
+
+/* #imagebox4 {
+    background-color: rgb(252, 100, 232);
+    min-width: 200%;
+} */
+
+
 
 footer {
-    text-align: center; 
-    margin-bottom: 40px;
+    padding-top: 10px;
+    margin-top: auto;
+    color: grey;
+    bottom: 0;
 }
 
-@media only screen and (min-width: 600px) {
-   div {
-        display: flex;
-        gap: 10px;
-        height: 200px;
+
+
+/* subpage containers */
+
+
+#ldacontainer {
+    padding-top: 20px;
+    margin: auto 10%;
+    padding-bottom: 50px;
+
+    align-content: center;
+}
+
+#ldacontainer image {
+    min-width: calc(100%);
+
+    box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+}
+
+#anicontainer {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    /* grid-auto-rows: 200px; */
+    align-content: center;
+
+    padding-top: 20px;
+    gap: 20px;
+    margin: auto 10%;
+    padding-bottom: 20px;
+}
+
+#anicontainer video {
+    max-width: calc(100%);
+
+    box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+}
+
+#illcontainer {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    /* grid-auto-rows: 200px; */
+    align-content: center;
+
+    padding-top: 20px;
+    gap: 20px;
+    margin: auto 5%;
+    padding-bottom: 50px;
+
+}
+
+#illcontainer img {
+    min-width: calc(100%);
+
+    box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+}
+
+
+#typcontainer {
+
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    align-content: center;
+
+    padding-top: 20px;
+    gap: 20px;
+    margin: auto 10%;
+    padding-bottom: 50px;
+
+}
+
+#typcontainer img {
+    min-width: 100%;
+    box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+  }
+
+
+
+
+@media screen and (min-width:600px) and (max-width:1080px) {
+    body {
+      width: 100% ;
     }
+
+    #top header {
+        padding-top: 100px;
+        margin: auto 10%;
+        text-align: left; 
+        max-width: 600px; 
+    
+    }
+
+    #gridcontainer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-auto-rows: 50vh;
+        align-content: center;
+    }
+
+    #gridcontainer div { 
+        min-width: calc(100%/3);
+    }
+
+    #gridcontainer div a {
+        display: block;
+        color: black;
+        text-decoration: none;
+      
+        font-size: 20px;
+        padding-top: calc(100%-10px);
+        padding-bottom: calc(100%-10px);
+        height: 100vh;
+        /* have the values above add up to 50vh, i.e the grid box size */
+        
+    }
+
+    #illcontainer {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        /* grid-auto-rows: 200px; */
+        align-content: center;
+    
+    }
+    
+    #typcontainer {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        /* grid-auto-rows: 200px; */
+        align-content: center;
+        margin: auto 5%;
+    
+    }
+  
+
+}
+
+
+
+
+@media screen and (min-width:1080px) {
 
     body {
-        width: 90%;
+        width: 100% ;
+      }
+  
+      p {
+        margin: auto 20%;
+      }
+
+      #top header {
+        padding-top: 100px;
+        margin: auto 10%;
+        text-align: left; 
+        max-width: 600px; 
+    
     }
+
+    #gridcontainer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-auto-rows: 50vh;
+        align-content: center;
+    }
+
+    #gridcontainer div { 
+        min-width: calc(100%/3);
+    }
+
+    #gridcontainer div a {
+        display: block;
+        color: black;
+        text-decoration: none;
+      
+        font-size: 20px;
+        padding-top: calc(100%-10px);
+        padding-bottom: calc(100%-10px);
+        /* have the values above add up to 50vh, i.e the grid box size */
+        
+    }
+
+    #illcontainer {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto auto auto;
+        /* grid-auto-rows: 200px; */
+        align-content: center;
+    
+    }
+    
+
+    #typcontainer {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        /* grid-auto-rows: 200px; */
+        align-content: center;
+        margin: auto 5%;
+    }
+  
 }
-
-@media only screen and (min-width: 1020px) {
-     body {
-         width: 1020px;  /*stops growing*/
-     }
-
-     header {
-        font-size:calc(width*10%);
-     }
-     div {
-        display: flex;
-        gap: 10px;
-        height: 200px;
-    }
- }
