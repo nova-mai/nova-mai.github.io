@@ -65,7 +65,7 @@ p {
 
 #gridcontainer {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     grid-auto-rows: 200px;
     align-content: center;
    
@@ -87,7 +87,7 @@ p {
     color: black;
     text-shadow: 20px;
     text-decoration: none;
-  
+
     font-size: 20px;
     padding-top: 90px;
     padding-bottom: 90px;
@@ -96,25 +96,29 @@ p {
 }
 
 #imagebox1 {
-    background-color: aqua;
+    background-color: rgb(71, 255, 255);
     /* background-image: url("data/koi.png"); */
     min-width: calc(100% / 2);
 }
 
 #imagebox2 {
-    background-color: pink;
+    background-color: rgb(255, 178, 240);
     min-width: calc(100% / 2);
 }
 
 #imagebox3 {
-    background-color: yellow;
-    min-width: 200%;
+    background-color: rgb(251, 251, 155);
+    /* min-width: 200%; */
+    min-width: calc(100% / 2);
+
 }
 
-/* #imagebox4 {
-    background-color: rgb(252, 100, 232);
-    min-width: 200%;
-} */
+ #imagebox4 {
+    background-color: rgb(136, 246, 187);
+    /* min-width: 200%; */
+    min-width: calc(100% / 2);
+
+} 
 
 
 
@@ -122,7 +126,7 @@ footer {
     padding-top: 10px;
     margin-top: auto;
     color: grey;
-    bottom: 0;
+    /* bottom: 0; */
 }
 
 
@@ -148,8 +152,8 @@ footer {
 
 #anicontainer {
     display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
     /* grid-auto-rows: 200px; */
     align-content: center;
 
@@ -159,13 +163,15 @@ footer {
     padding-bottom: 20px;
 }
 
-#anicontainer video {
-    max-width: calc(100%);
+iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+  }
 
-    box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
-    -moz-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
-}
+/* #anicontainer video {
+    max-width: calc(100%);
+} */ 
 
 #illcontainer {
     display: grid;
@@ -182,6 +188,28 @@ footer {
 }
 
 #illcontainer img {
+    min-width: calc(100%);
+
+    box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
+}
+
+#comcontainer {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    /* grid-auto-rows: 200px; */
+    align-content: center;
+
+    padding-top: 20px;
+    gap: 20px;
+    margin: auto 5%;
+    padding-bottom: 50px;
+
+}
+
+#comcontainer img {
     min-width: calc(100%);
 
     box-shadow: 1px 6px 22px -3px rgba(0,0,0,0.6);
@@ -235,7 +263,7 @@ img {
 
     #gridcontainer {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
         grid-auto-rows: 50vh;
         align-content: center;
     }
@@ -248,11 +276,15 @@ img {
         display: block;
         color: black;
         text-decoration: none;
+
+         
+        position: relative;
+        top: 80px;
       
         font-size: 20px;
         padding-top: calc(100%-10px);
         padding-bottom: calc(100%-10px);
-        height: 100vh;
+        /* height: 100vh; */
         /* have the values above add up to 50vh, i.e the grid box size */
         
     }
@@ -266,14 +298,7 @@ img {
     
     }
     
-    #typcontainer {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        /* grid-auto-rows: 200px; */
-        align-content: center;
-        margin: auto 5%;
-    
-    }
+
   
 
 }
@@ -301,7 +326,7 @@ img {
 
     #gridcontainer {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto auto;
         grid-auto-rows: 50vh;
         align-content: center;
     }
@@ -314,6 +339,9 @@ img {
         display: block;
         color: black;
         text-decoration: none;
+  
+        position: relative;
+        top: 80px;
       
         font-size: 20px;
         padding-top: calc(100%-10px);
@@ -331,6 +359,18 @@ img {
     
     }
     
+    #comcontainer {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        /* grid-auto-rows: 200px; */
+        align-content: center;
+    
+        padding-top: 20px;
+        gap: 20px;
+        margin: auto 5%;
+        padding-bottom: 50px;
+    }
 
     #typcontainer {
         display: grid;
